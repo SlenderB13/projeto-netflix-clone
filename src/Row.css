@@ -1,0 +1,34 @@
+.row {
+    color: white;
+    padding: 1.2rem;
+}
+
+.row_poster {
+    height: 12em;
+    padding-top: 1.2rem;
+    padding-bottom: 0.5rem;
+    margin-right: 0.8rem;
+    transition: transform 450ms;
+}
+
+.row_poster:hover {
+    transform: scale(1.05);
+}
+
+.row_posterLarge {
+    height: 30em;
+}
+
+.row_posterLarge:hover {
+    transform: scale(1.08);
+}
+
+.row_container {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.row_container::-webkit-scrollbar {
+    display: none;
+}
