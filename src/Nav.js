@@ -6,10 +6,12 @@ import avatar from './netflix-avatar.png'
 function Nav() {
 
     const [show, handleShow] = useState(false);
+    const nav = document.getElementsByClassName('nav_logo');
     
     const transitionNavBar = () => {
         if(window.scrollY > 100) {
             handleShow(true);
+            nav.style.opacity = 1;
         } else {
             handleShow(false);
         }
@@ -21,6 +23,7 @@ function Nav() {
             return () => window.removeEventListener("scroll", transitionNavBar);
         }
     }, [])
+
 
     return (
         <div className={`nav ${show && 'nav_black'}`}>

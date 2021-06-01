@@ -2,6 +2,7 @@ import axios from './axios';
 import React, { useEffect, useState } from 'react'
 import "./Banner.css"
 import requests from './Requests'
+import logo from './netflix-logo.png'
 
 function Banner() {
 
@@ -29,13 +30,17 @@ function Banner() {
             backgroundPosition: "center center"
         }}>
 
+            <div className="banner_cover"></div>
+
+            <img src={logo} alt="netflix" className="banner_logo"/>
+
            <div className="banner_content">
-               <h1 className="banner_title">{movie?.original_name || movie?.name || movie?.title}</h1>
+               <h1 id="banner-title" className="banner_title">{movie?.original_name || movie?.name || movie?.title}</h1>
                <div className="banner_buttons">
                    <button className="banner_button">Play</button>
                    <button className="banner_button">My List</button>
                </div>
-               <h1 className="banner_description">{Truncate(`${movie?.overview}`, 150)}</h1>
+               <h1 className="banner_description">{Truncate(`${movie?.overview}`, 300)}</h1>
 
             </div> 
             <div className="banner--fadeBottom" />

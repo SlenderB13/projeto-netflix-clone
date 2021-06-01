@@ -1,14 +1,27 @@
 .row {
-    color: white;
     padding: 1.2rem;
 }
 
+.row_title_container {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.row_title {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
 .row_poster {
-    height: 12em;
+    height: 10em;
     padding-top: 1.2rem;
     padding-bottom: 0.5rem;
     margin-right: 0.8rem;
     transition: transform 450ms;
+    border-radius: 1.6rem;
 }
 
 .row_poster:hover {
@@ -16,7 +29,7 @@
 }
 
 .row_posterLarge {
-    height: 30em;
+    height: 22em;
 }
 
 .row_posterLarge:hover {
@@ -31,4 +44,17 @@
 
 .row_container::-webkit-scrollbar {
     display: none;
+}
+
+.row_container_large-white {
+    background-color: #f1f1f1;
+    display: flex;
+}
+
+.banner_logo {
+    height: 8rem;
+    transform: rotate(-90deg);
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: -9rem;
 }
